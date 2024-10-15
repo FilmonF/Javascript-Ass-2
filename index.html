@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Question No. 1     -->
+
+    <img id="imageid" src="Turnedoff.png" height="300" width="400">
+
+    <div>
+        <button onclick="TurnedOff()"> Turne off</button>     
+        <button onclick="TurnedOn()"> Turn on</button>
+    </div>
+
+    
+   
+    <script>
+        var myImage = document.querySelector("#imageid")
+
+        function TurnedOn(){
+
+            myImage.src="TurnedOn.png"
+
+
+        }
+
+        function TurnedOff(){
+
+            myImage.src="Turnedoff.png"
+
+
+
+        }
+          
+    
+    </script> 
+
+   
+ <br><br><br>
+ 
+ <h3>2. Display of Current Time</h3>
+
+
+    <!-- // -->
+
+    <!-- Question No. 2 -->
+
+
+    
+    <br><br>
+
+
+    <SCript>
+
+        function showTime(){
+
+            var dt =new Date();
+            var hour= dt.getHours();
+            var minutes= dt.getMinutes();
+            var seconds= dt.getSeconds();
+
+   
+
+            let x = hour >= 12 ? "PM" : "AM"
+
+         
+
+
+            var currentTime= hour + ":" + minutes + ":" + seconds + x;
+              document.getElementById("displayTime").innerHTML=currentTime;
+            //  displayTime.innerHTML= hour + ":" + minutes + ":" + seconds + x;
+
+        }
+
+    
+
+    </SCript>
+
+<div>
+    <button onclick="showTime()">Time</button>
+    <p id="displayTime"></p>
+</div>
+
+
+<div>
+    
+  
+    
+</div>
+
+
+<!-- // question no. 3   // -->
+
+<h3>3. Substring</h3>
+<script>
+
+    function characterRemover(str) {
+
+        const inputString=document.getElementById("inputString").value;
+
+        const newString= inputString.substring(1, inputString.length - 1);
+
+        document.getElementById("result").innerHTML= newString;
+        
+
+
+// return str.substring(1,str.length - 1)= 
+
+
+
+}
+</script>
+
+    <!-- Input field for user to enter a string -->
+
+    <input type="text" id="inputString" placeholder="Type a string">
+
+    <!-- Button to trigger the function -->
+
+    <button onclick="characterRemover()">Get Result</button>
+
+        <!-- Paragraph to display the result -->
+
+
+
+    <p id="result"></p>
+
+
+
+
+
+   
+</body>
+</html>
